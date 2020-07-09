@@ -1,0 +1,208 @@
+@charset 'utf-8';
+
+// 中央揃え
+@mixin center {
+    width: 75%;
+    margin: 0 auto;
+}
+
+// 英数字の設定
+@mixin abc-style($color: #fff, $fSize: 16px) {
+    font-family: 'Bitter', serif;
+    color: $color;
+    font-size: $fSize;
+}
+
+// 日本語の設定
+
+// アンカータグの設定
+a, p {
+    text-decoration: none;
+    line-height: 2;
+}
+
+// define 
+@mixin define-setting {
+    width: 100vw;
+    height: 100vh;
+    font-size: 20px;
+}
+
+// 共通部 body
+body {
+    @include define-setting();
+    header {
+        padding-top: 30px;
+        .adjust-header {
+            display: flex;
+            justify-content: space-between;
+            @include center();
+            #logo {
+                a {
+                    @include abc-style(#fff, 2.0em);
+                    font-weight: bold;
+                    font-family: 'Yellowtail', cursive;
+                    &:hover {
+                        border-bottom: 2px solid #fff;
+                    }
+                }
+            }
+            #global-nav {
+                ul {
+                    display: flex;
+                    li {
+                        margin-right: 40px;
+                        a {
+                            @include abc-style(#fff, 1.0em);
+                            &:hover {
+                                border-bottom: 2px solid #fff;
+                            }
+                        }
+                        padding-top: 30px;
+                        &:last-child {
+                            margin-right: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // topPage以外のページの共通タイトル
+    .wrap {
+        @include center();
+        h1 {
+            @include abc-style(#000, 2.0em);
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 125px;
+        }
+        h2 {
+            @include abc-style(#000, 1.2em);
+            margin-bottom: 20px;
+            &:before {
+                content: "";
+                padding-right: 10px;
+                border-left: 7px solid #000;
+            }
+        }
+
+        .section-setting {
+            margin-bottom: 100px;
+            background-color: #fafafa;
+            padding: 20px 0;
+            // border-radius: 5px;
+        }
+
+        .two-column {
+            display: flex;
+        }
+    }
+    
+    footer {
+        @include center();
+    }
+}
+
+// ボタンの作成
+@mixin button {
+    background-color: #009cd3;
+    color: #fff;
+    // font-size: 20px;
+    font-family: 'Bitter', serif;
+    text-decoration: none;
+    width: 185px;
+    display: block;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 40px;
+    border-radius: 5px;
+    border: 3px solid #009cd3;
+    &:hover {
+        text-decoration: none;
+        background-color: #fff;
+        color: #009cd3;
+    }
+
+}
+
+// 背景画像の設定
+@mixin setting-top-bgi {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+// portfolio, aboutの背景画像の設定
+@mixin setting-bgi {
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
+// #TopPage 編集
+#TopPage {
+    height: 100%;
+    header {
+        margin-bottom: 100px;
+    }
+    background-image: url('../images/TopPage3.jpg');
+    @include setting-top-bgi();
+    main {
+        margin-bottom: 200px;
+        .catch {
+            @include center();
+            h1 {
+                @include abc-style(#fff, 6.0em);
+                margin-bottom: 60px;
+            }
+            .txt {
+                // font-size: 20px;
+                color: #fff;
+                margin-bottom: 100px;
+            }
+            .btn {
+                a {
+                @include button();
+                }
+            }
+        }
+    }
+
+    footer {
+        color:#fff;
+    }
+} 
+
+
+// portfolio, aboutページの共通部位
+@mixin adjust-header() {
+    height: 35%;
+    @include setting-bgi();
+    margin-bottom: 60px;
+}
+
+// #portfolio 編集
+#portfolio {
+    height: inherit;
+    header {
+        background-image: url('../images/TopPage.jpg');
+        @include adjust-header();
+    }
+}
+
+// #about 編集
+#about {
+    height: inherit;
+    header {
+        background-image: url('../images/about.jpg');
+        @include adjust-header();
+    }
+
+    #profile {
+        width: inherit;
+    }
+    
+}
