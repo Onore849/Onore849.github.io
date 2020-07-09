@@ -1,0 +1,196 @@
+a, p {
+  text-decoration: none;
+  line-height: 2;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  font-size: 20px;
+}
+
+body header {
+  padding-top: 30px;
+}
+
+body header .adjust-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 75%;
+  margin: 0 auto;
+}
+
+body header .adjust-header #logo a {
+  font-family: 'Bitter', serif;
+  color: #fff;
+  font-size: 2em;
+  font-weight: bold;
+  font-family: 'Yellowtail', cursive;
+}
+
+body header .adjust-header #logo a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+body header .adjust-header #global-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body header .adjust-header #global-nav ul li {
+  margin-right: 40px;
+  padding-top: 30px;
+}
+
+body header .adjust-header #global-nav ul li a {
+  font-family: 'Bitter', serif;
+  color: #fff;
+  font-size: 1em;
+}
+
+body header .adjust-header #global-nav ul li a:hover {
+  border-bottom: 2px solid #fff;
+}
+
+body header .adjust-header #global-nav ul li:last-child {
+  margin-right: 0;
+}
+
+body .wrap {
+  width: 75%;
+  margin: 0 auto;
+}
+
+body .wrap h1 {
+  font-family: 'Bitter', serif;
+  color: #000;
+  font-size: 2em;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 125px;
+}
+
+body .wrap h2 {
+  font-family: 'Bitter', serif;
+  color: #000;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+}
+
+body .wrap h2:before {
+  content: "";
+  padding-right: 10px;
+  border-left: 7px solid #000;
+}
+
+body .wrap .section-setting {
+  margin-bottom: 100px;
+  background-color: #fafafa;
+  padding: 20px 0;
+}
+
+body .wrap .two-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body footer {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#TopPage {
+  height: 100%;
+  background-image: url("../images/TopPage3.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+#TopPage header {
+  margin-bottom: 100px;
+}
+
+#TopPage main {
+  margin-bottom: 200px;
+}
+
+#TopPage main .catch {
+  width: 75%;
+  margin: 0 auto;
+}
+
+#TopPage main .catch h1 {
+  font-family: 'Bitter', serif;
+  color: #fff;
+  font-size: 6em;
+  margin-bottom: 60px;
+}
+
+#TopPage main .catch .txt {
+  color: #fff;
+  margin-bottom: 100px;
+}
+
+#TopPage main .catch .btn a {
+  background-color: #009cd3;
+  color: #fff;
+  font-family: 'Bitter', serif;
+  text-decoration: none;
+  width: 185px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+  border: 3px solid #009cd3;
+}
+
+#TopPage main .catch .btn a:hover {
+  text-decoration: none;
+  background-color: #fff;
+  color: #009cd3;
+}
+
+#TopPage footer {
+  color: #fff;
+}
+
+#portfolio {
+  height: inherit;
+}
+
+#portfolio header {
+  background-image: url("../images/TopPage.jpg");
+  height: 35%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 60px;
+}
+
+#about {
+  height: inherit;
+}
+
+#about header {
+  background-image: url("../images/about.jpg");
+  height: 35%;
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-attachment: fixed;
+  background-size: cover;
+  margin-bottom: 60px;
+}
+
+#about #profile {
+  width: inherit;
+}
+/*# sourceMappingURL=style.css.map */
